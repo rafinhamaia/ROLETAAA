@@ -1,0 +1,89 @@
+body {
+  font-family: sans-serif;
+  background: url("logo_olympu_min.jpeg") center center no-repeat;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: brightness(0.5);
+}
+
+#form-container, #wheel-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#clientName {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #f4c542;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#wheel {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(0deg);
+  transition: transform 5s cubic-bezier(0.33, 1, 0.68, 1);
+  margin-top: 30px;
+}
+
+.segment {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: 100% 100%;
+  background: orange;
+  clip-path: polygon(100% 100%, 0% 100%, 100% 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid white;
+  position: absolute;
+  top: -30px;
+  left: calc(50% - 20px);
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
